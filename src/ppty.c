@@ -90,7 +90,7 @@ int fork_and_exec_on_slave(int master, int slave, char* argv[])
 
 // write a buffer into a file descriptor
 // returns 0 on success or any other value on error 
-ssize_t write_buffer(int fd, const void* buffer, ssize_t size)
+int write_buffer(int fd, const void* buffer, ssize_t size)
 {
   ssize_t bytes_written = 0;
   while (bytes_written < size)
